@@ -1,5 +1,15 @@
 #!/usr/bin/env python
 
+'''
+These scripts are documented within the associated README.md.
+They are provided as a skeleton starting point for other 
+projects.
+
+The code was produced by Peter Clapham and Simon Fraser of the
+Wellcome Trust Sanger Institute under GPL, please see the 
+attached LICENSE file for details.
+'''
+
 import pika
 import json
 import time
@@ -94,6 +104,7 @@ def send(datadict):
     '''
     logging.getLogger('pika').setLevel(logging.DEBUG)
 
+    # Set correct connection details here
     credentials = pika.credentials.PlainCredentials("user", "passwd")
     parameters = pika.ConnectionParameters('amqp-srv-server',
                                             5672,
@@ -111,7 +122,7 @@ def send(datadict):
 
 def bintrans(exitStatus):
     '''
-    Why does lsf sometime add bit shift to
+    Why does lsf sometimes add bit shift to
     it's exit codes ? Here's a tidy up to 
     rectify the problem
     '''
@@ -171,4 +182,5 @@ def read_eventrec(path):
         time.sleep(1)
         
 if __name__ == '__main__':
-    read_eventrec("/usr/local/lsf/work/farm3/logdir/lsb.acct")
+    # Set correct path to lsb.acct here
+    read_eventrec("/usr/local/lsf/work/<cluster_name>/logdir/lsb.acct")

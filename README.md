@@ -48,7 +48,8 @@ source and confirm that these work as expected with:
 
 source <virtualenv_dir>/bin/activate
 
-Edit lsf_log_watch.py to reflect local directories and AMQP server details
+Edit lsf_log_watch.py to reflect local lsb.acct location and AMQP server 
+connection details and credentials.
 
 run ./lsf_log_watch.py &
 ```
