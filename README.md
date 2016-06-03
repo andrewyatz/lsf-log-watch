@@ -7,12 +7,14 @@ distributed HPC environments. It provides a comprehensive set of intelligent,
 policy-driven scheduling features that enable you to utilise all of your 
 compute infrastructure resources and ensure optimal application performance.
 
-Obtaining job status is usually via poll based bjobs request. As clusters and
+Obtaining job status is usually via poll based bjobs requests. As clusters and
 user numbers continue to grow, this process becomes limiting and not a 
-practical programmitc interface for pipeline structures or workload management.
+practical programmtic interface for pipeline structures or workload management,
+pipeline development and cluster monitoring.
 
-This script should provide job data directly from the lsb.stream file. All 
-LSF status data is captured, along with job resource usage and requirements. 
+This script should provide job data directly from the lsb.acct file. All 
+LSF status data is captured, along with job resource usage and requirements, 
+which are sent to an AMQP queue.
 ```
 
 Setup
