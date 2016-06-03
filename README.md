@@ -42,7 +42,11 @@ Configure virtualenv
 
 ```
 Install virtualenv within your local environment and add the required python
-lsf api, pika, etc modules
+lsf api, pika, etc modules to your virtualenv. NB pythonlsf requires lsf 
+headers and libraries to be available on the host for installation to succeed.
+
+python lsf documetnation can be found here:
+https://github.com/PlatformLSF/platform-python-lsf-api
 
 source and confirm that these work as expected with:
 
