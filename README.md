@@ -9,8 +9,8 @@ compute infrastructure resources and ensure optimal application performance.
 
 Obtaining job status is usually via poll based bjobs requests. As clusters and
 user numbers continue to grow, this process becomes limiting and not a 
-practical programmtic interface for pipeline structures or workload management,
-pipeline development and cluster monitoring.
+practical programmtic interface for workload management, pipeline development
+or cluster monitoring.
 
 This script should provide job data directly from the lsb.acct file. All 
 LSF status data is captured, along with job resource usage and requirements, 
